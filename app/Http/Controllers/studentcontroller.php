@@ -19,10 +19,7 @@ class StudentController extends Controller
     {
         switch($id){
             case 1;
-                return 'id=1';
-        break;   
-          case 2;
-                  return 'id=3';
+                return 'narges';
         break;
         default:
         return 'other';
@@ -37,11 +34,6 @@ class StudentController extends Controller
             'name'=>'narges',
             'family'=>'raeis'
         ];
-        $students[]=[ 
-            'id'=>3,
-            'name'=>'fateme',
-            'family'=>'nasr'
-        ];
         return $students;
     }
     public function create(request $request)
@@ -49,8 +41,9 @@ class StudentController extends Controller
         $id=$request->id;
         $name=$request->name;
         $family=$request->family;
-        $result='the student with id c'. $id.' and name '. $name .' created!';
+        $result='the student with id '. $id.' and name '. $name .' created!';
 
         return $result;
     }
-?>
+
+}
