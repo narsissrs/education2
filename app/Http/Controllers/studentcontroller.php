@@ -15,24 +15,31 @@ class StudentController extends Controller
     {
         //
     }
-    public function read($id)
-    {
-        switch($id){
-            case 1;
-                return 'narges';
-        break;
-        default:
-        return 'other';
-        }
-    }
+    
+    
     public function list()
     {   
         $students=[];
         
         $students[]=[ 
             'id'=>1,
-            'name'=>'narges',
-            'family'=>'raeis'
+            'name'=>'fatemeh',
+            'family'=>'nasr esf'
+        ];
+        $students[]=[ 
+            'id'=>2,
+            'name'=>'ali',
+            'family'=>'ahmadi'
+        ];
+        $students[]=[ 
+            'id'=>3,
+            'name'=>'narsis',
+            'family'=>'rs'
+        ];
+        $students[]=[ 
+            'id'=>4,
+            'name'=>'mina',
+            'family'=>'hosseiny'
         ];
         return $students;
     }
@@ -41,9 +48,11 @@ class StudentController extends Controller
         $id=$request->id;
         $name=$request->name;
         $family=$request->family;
-        $result='the student with id '. $id.' and name '. $name .' created!';
+        $result='the student with id c'. $id.' and name '. $name .' created!';
 
         return $result;
     }
 
+
+    //
 }
